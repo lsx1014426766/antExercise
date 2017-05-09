@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<project name="b2-build" default="tstamp">
+
+  <target name="tstamp"> 
+	<tstamp>
+	<format property="d1" pattern="yyyy-MM-dd"/>
+	<format property="dayofweek" pattern="EEEE"/>
+	</tstamp>
+	<echo message="${DSTAMP}"/><!--年月日-->
+	<echo message="${TSTAMP}"/><!--时分-->
+	<echo message="${TODAY}"/><!--月日年-->
+	<echo message="${dayofweek}"/>
+	<echo message="${d1}"/><!--format形式-->
+  </target>
+
+</project>

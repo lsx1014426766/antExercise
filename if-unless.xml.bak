@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<project name="if-unless" default="all" >
+<!--注意 . 代表当前目录  .. 代表上一级目录-->
+  <property name="model a " value="yes"/>
+<target name="model a" if="model a ">
+	     <echo>model a is running</echo>
+</target>
+<target name="model b" unless="model a ">
+	     <echo>model b is running!!!</echo>
+</target>
+  <target name="all" depends="model a,model b"> 
+  </target>
+
+</project>

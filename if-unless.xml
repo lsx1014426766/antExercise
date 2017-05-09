@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<project name="if-unless" default="all" >
+<!--注意 . 只要为model a设置值了，就会运行a-->
+  <property name="model a " value="yes"/>
+<target name="model a" if="model a ">
+<!--这里放name，而非值-->
+	     <echo>model a is running</echo>
+</target>
+<target name="model b" unless="model a ">
+	     <echo>model b is running!!!</echo>
+</target>
+  <target name="all" depends="model a,model b"> 
+  </target>
+
+</project>

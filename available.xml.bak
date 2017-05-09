@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<project name="b2-build" default="available">
+  <target name="available">
+  	<!--检查一个文件是否存在-->
+  <property name="DriverClass.is.present.in.jar" value="myNote"/>
+  	<echo>DriverClass.is.present.in.jar:${DriverClass.is.present.in.jar}</echo>
+  <available classname="org.gjt.mm.mysql.Driver"
+                  classpath="jars/mysql-connector-java-3.1.14-bin.jar"
+				  property="DriverClass.is.present.in.jar"/>
+	<echo>DriverClass.is.present.in.jar:${DriverClass.is.present.in.jar}</echo>
+
+	<!--检查一个文件是否存在-->
+	<property name="jar2" value="./jars/tools.jar"/>
+   <available file="${jar2}" type="file" property="jar2.present"/>
+   <echo message="判断jar2是否存在：${jar2.present}"/>
+	<!--检查jvm系统资源是否存在-->
+	<property name="jar2" value="./jars/tools.jar"/>
+   <available resource="tools.jar" property="tools_jar">
+     <classpath>
+	    <pathelement location="jars"/>
+	 </classpath>
+   </available>
+   <echo message="判断tools.jar是否存在：${tools_jar}"/>
+
+
+  </target>
+
+</project>

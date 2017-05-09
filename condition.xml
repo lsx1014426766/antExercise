@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<project name="b4-build" default="condition">
+
+
+<target name="condition">
+ <condition property="ss">
+    <and>
+	  <os family="windows"/>
+	  <not>
+	    <os family="unix"/>
+	  </not>  
+	</and>
+  </condition>
+  <echo message="${ss}"/>
+ </target>
+
+</project>

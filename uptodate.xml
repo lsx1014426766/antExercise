@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<project name="b2-build" default="uptodate">
+<!--注意 . 代表当前目录  .. 代表上一级目录-->
+  <property name="pack" value="build/classes"/>
+<target name="copy">
+         <available file="${pack}" type="file" property="pack.present" />
+         <javac srcdir="src/b" destdir="${pack}"/>
+	     <echo>编译</echo>
+</target>
+
+  <target name="uptodate"> 
+	<uptodate property="test.unnessary" value="of cource!">
+	<srcfiles dir="src/b"  includes="**/*.java"/>
+	<mapper type="glob" 
+	              from="*.java"
+				  to="${pack}"/>
+	
+    </uptodate>
+				  <echo>是否需要重新编译：${test.unnessary}</echo>
+  </target>
+
+</project>

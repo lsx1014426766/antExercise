@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<project name="b2-build" default="echo">
+<property name="lib" location="dest"/>
+ <target name="echo" >
+  <echo message="${lib}"/>
+  <echo message="${password}"/>
+ </target>
+</project>

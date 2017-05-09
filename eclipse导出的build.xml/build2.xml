@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project importYLdata">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="F:/567.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="com.atmd.importYLdata"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="E:/eclipseSpace/importYLdata/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/eclipseSpace/importYLdata/junit.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/eclipseSpace/importYLdata/log4j-1.2.16.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/eclipseSpace/importYLdata/mysql-connector-java-5.1.25-bin.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/eclipseSpace/importYLdata/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/eclipseSpace/importYLdata/commons-codec-1.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/eclipseSpace/importYLdata/commons-httpclient-3.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/eclipseSpace/importYLdata/commons-logging-1.1.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/eclipseSpace/importYLdata/YLXML.jar"/>
+        </jar>
+    </target>
+</project>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project name="b2-build" default="init3">
+  <target name="init1">
+  <condition property="file exist">
+      <and>
+	       <available classname="org.gjt.mm.mysql.Driver2"  classpath="jars/mysql-connector-java-3.1.14-bin.jar"                                                  property="DriverClass.is.present.in.jar"/>     	
+	  </and>
+  </condition>
+    <echo>DriverClass.is.present.in.jar:${DriverClass.is.present.in.jar}</echo>
+	 <echo>file exist:${file exist}</echo>
+  <fail message="file not exist!" unless="file exist"/>
+  </target>
+  <target name="init2">
+       <echo message="output init2!"/>
+  </target>
+  <target name="init3" depends="init1,init2">
+  </target>
+
+</project>

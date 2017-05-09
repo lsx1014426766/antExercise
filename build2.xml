@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<project name="b2-build" default="copy">
+<!--注意 . 代表当前目录  .. 代表上一级目录-->
+  <!--<target name="compile">
+    <javac srcdir="." destdir="dest"/>
+	<echo>compile implement!</echo>
+  </target>
+
+ <target name="execute" depends="compile" description="bfd">
+    <java classname="b2.Main"
+          classpath="dest">
+    <arg value="a"/>
+    <arg value="b"/>
+    <arg file="."/>
+     </java>
+	<echo>compile implement!</echo>
+  </target>
+-->
+ <target name="copy" >
+   <fileset dir="src"   includes="**/*.java,**/*.txt"   id="source.fileset"/>
+   <copy  todir="back2">
+      <fileset dir="src">
+	  
+           <exclude name="**/*.txt"/>
+	   </fileset>
+   </copy>
+ </target>
+</project>

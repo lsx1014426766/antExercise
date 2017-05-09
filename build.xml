@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<project name="b2-build" default="nested">
+  <target name="compile">
+    <javac srcdir="." classpath="jars/mysql-connector-java-3.1.14-bin.jar"/>
+	<echo>compile implement!</echo>
+  </target>
+
+ <target name="nested">
+ <echo message="ffffffffffffffff"/>
+    <ant antfile="./build/build.xml">
+     <property name="nested build" value="who are you?"/>
+   </ant>
+  <echo message="${nested build}"/>
+  </target>
+
+
+</project>

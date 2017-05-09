@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+<project name="测试脚本"  basedir="." > 
+  <echo>操作系统的名称：$os.name}</echo>
+
+ <echo>项目引用的根目录：${basedir}</echo>
+<echo>ant 工具根目录的位置：${ant.home}</echo>
+
+ <echo>构建文件的绝对路径：${ant.file}</echo>
+<echo>ant 的版本信息：${ant.version}</echo>
+
+ <echo>ant检测到的jvm版本：${ant.java.version}</echo>
+<echo>当前执行的项目名称及信息：${ant.project.name}</echo>
+
+ <echo>java版本：${java.version}</echo>
+<echo>java 根目录：${java.home}</echo>
+
+ <echo>java类库的文件位置：${java.class.path}</echo>
+<echo>换行符：${line.separator}</echo>
+<echo>用户的home目录：${user.home}</echo>
+ </project>

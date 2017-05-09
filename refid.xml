@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="b2-build" default="refid" basedir="src">
+<path id="compile-path">
+    <pathelement location="dest"/>
+	  <pathelement location="build"/>
+</path>
+<property name="path2" refid="compile-path"/>
+  <target name="refid">
+       <echo message="${path2}"/>
+  </target> 
+</project>

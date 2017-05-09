@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<project name="b2-build" default="222">
+  <target name="222">
+  <echo message="${nested build}"/>
+  </target>
+</project>

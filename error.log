@@ -1,0 +1,7 @@
+
+init:
+
+BUILD FAILED
+D:\a\build.xml:5: mkdir doesn't support the "default" attribute
+
+Total time: 0 seconds
